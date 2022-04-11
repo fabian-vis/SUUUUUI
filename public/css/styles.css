@@ -1,14 +1,21 @@
-<<<<<<< Updated upstream
-
-
 section{
     background-image: url( '/img/Pitch.svg' );
     width: 100%;
     background-repeat: no-repeat;
     margin: auto;
 }
-=======
-body {
-    background-color: red;
+
+.hoofd {
+    width: 100%;
+    border-radius: 100px;
 }
->>>>>>> Stashed changes
+
+.poppetje {
+    width: 100%;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;   
+}
