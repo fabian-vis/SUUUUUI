@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // Tell express to use a 'static' folder
-app.use(express.static('public'));
+app.use(express.static('static'));
 
 app.get('/', (req, res) => {
     res.render("home")
