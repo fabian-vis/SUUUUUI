@@ -1,10 +1,12 @@
 <%- include('./partials/head') %>
 <main>
-    <%projects.forEach((repo) => {%>
+    <section>
+        <%projects.forEach((repo) => {%>
 
-    <p><%= repo.node.owner.login %></p>
-    <% console.log(repo.node.owner.avatarUrl) %>
-    <img src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
-    <%})%>
+        <% console.log(repo.node.owner.avatarUrl) %>
+        <img class="hoofd" src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
+        <img class="poppetje" src="/img/poppetje.svg" alt="hoofden">
+        <%})%>
+    </section>
 </main>
 <%- include('./partials/foot') %>

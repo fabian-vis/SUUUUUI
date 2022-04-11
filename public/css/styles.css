@@ -1,3 +1,14 @@
-body {
-    background-color: red;
+section{
+    background-image: url( '/img/Pitch.svg' );
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.hoofd {
+    width: 200px
+}
+
+.poppetje {
+    width: 200px
 }
