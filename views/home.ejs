@@ -3,9 +3,17 @@
     <section>
         <%projects.forEach((repo) => {%>
 
+<<<<<<< Updated upstream
             <p><%= repo.node.owner.login %></p>
             <% console.log(repo.node.owner.avatarUrl) %>
             <img src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
+=======
+        <p><%= repo.node.owner.login %></p>
+        <div>
+            <img src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
+            <img src="/img/poppetje.svg" alt="poppetje">
+        </div>
+>>>>>>> Stashed changes
         <%})%>
     </section>
 </main>
