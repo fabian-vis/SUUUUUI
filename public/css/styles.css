@@ -6,9 +6,16 @@ section{
 }
 
 .hoofd {
-    width: 200px
+    width: 100%;
+    border-radius: 100px;
 }
 
 .poppetje {
-    width: 200px
+    width: 100%;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }

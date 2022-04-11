@@ -4,8 +4,10 @@
         <%projects.forEach((repo) => {%>
 
         <% console.log(repo.node.owner.avatarUrl) %>
-        <img class="hoofd" src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
-        <img class="poppetje" src="/img/poppetje.svg" alt="hoofden">
+        <div>
+            <img class="hoofd" src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
+            <img class="poppetje" src="/img/poppetje.svg" alt="hoofden">
+        </div>
         <%})%>
     </section>
 </main>
