@@ -1,7 +1,7 @@
 <%- include('./partials/head') %>
 <main>
     <section>
-        <article>
+        <article id="crowd">
             <%projects.forEach((repo) => {%>
                     <div class="man">
                         <img class="hoofdj" src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
@@ -18,20 +18,32 @@
             </div>
         </div>
         <img src="/img/doel.svg" class="doel">
-        <img src="/img/ball.svg" class="bal">
-        <div class="voetballer">
+        <img src="/img/ball.svg" class="bal" id="jorginhoBal">
+        <div class="voetballer" id="jorginho">
             <img class="hoofdj" src="<%= randomnpc.node.owner.avatarUrl %> " alt="hoofden">
             <img class="popj" src="/img/poppetje.svg" alt="poppetje">
         </div>
-        <p><%= repo.node.owner.login %></p>
-        <% console.log(repo.node.owner.avatarUrl) %>
-        <img src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
-        <p><%= repo.node.owner.login %></p>
-        <div>
-            <img src="<%= repo.node.owner.avatarUrl %> " alt="hoofden">
-            <img src="/img/poppetje.svg" alt="poppetje">
+        <div class="popup" id="popup">
+            <div class="popupcontent">
+                <div class="popup-header">
+                    <span class="close">&times;</span>
+                    <h2><%= randomnpc.node.nameWithOwner %></h2>
+                  </div>
+                  <div class="popup-body">
+                    <img src="<%= randomnpc.node.owner.avatarUrl %> " alt="hoofden">
+                    <a href="<%= randomnpc.node.url %>" target="_blank">Github repository</a></b></p>
+                    <% if (randomnpc.node.shortDescriptionHTML)
+                    { %>
+                        <p><%= randomnpc.node.shortDescriptionHTML %></p>
+                    <% } 
+                    else { %>
+                        <p>Deze gebruiker heeft geen description :(</p>
+                    <% } %>
+                    
+                   
+                  </div>
+            </div>
         </div>
-        <%})%>
     </section>
 </main>
 <%- include('./partials/foot') %>

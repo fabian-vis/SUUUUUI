@@ -27,21 +27,26 @@ app.use(express.static('public'));
 
 app.get("/", (req, res) => {
     graphqlAuth(`query {
-    repositoryOwner(login: "cmda-minor-web") {
-      repository(name: "css-to-the-rescue-2122") {
-        forks(first: 100) {
-          edges {
-            node {
-              owner {
-                avatarUrl
-                login
+      repositoryOwner(login: "cmda-minor-web") {
+        repository(name: "css-to-the-rescue-2122") {
+          forks(first: 100) {
+            edges {
+              node {
+                owner {
+                  avatarUrl
+                  login
+                  url
+                }
+                url
+                nameWithOwner
+                shortDescriptionHTML
+                updatedAt
               }
             }
           }
         }
       }
-    }
-  }`).then((data) => {
+    }`).then((data) => {
     function random_item(projects) {
       return projects[Math.floor(Math.random()*projects.length)];     
     }
@@ -55,3 +60,4 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`Ai we live at http://${hostname}:${port}/`);
 })
+
