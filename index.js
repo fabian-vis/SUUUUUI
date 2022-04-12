@@ -15,9 +15,6 @@ const graphqlAuth = graphql.defaults({
         authorization: 'token ' + process.env.API_KEY
     },
 })
-
-
-
 app.set('view engine', 'ejs');
 
 // Tell the views engine/ejs where the template files are stored (Settingname, value)
@@ -25,6 +22,8 @@ app.set('views', 'views');
 
 // Tell express to use a 'static' folder
 app.use(express.static('public'));
+
+
 
 app.get("/", (req, res) => {
     graphqlAuth(`query {
@@ -43,8 +42,12 @@ app.get("/", (req, res) => {
       }
     }
   }`).then((data) => {
+    function random_item(projects) {
+      return projects[Math.floor(Math.random()*projects.length)];     
+    }
         res.render('home', {
             projects: data.repositoryOwner.repository.forks.edges,
+            randomnpc: random_item(data.repositoryOwner.repository.forks.edges)
         })
     })
 })

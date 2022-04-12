@@ -1,8 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
 
 section{
     background-image: url( '/img/Pitch.svg' );
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+
+
+}
+
+.doel{
+    position: absolute; 
+    left: 0; 
+    right: 0;
+    top: 10em;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 32em; 
+
+}
+
+.bal{
+
+    position: absolute; 
+    left: 0; 
+    right: 0;
+    bottom: 15vh;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 4em; 
+}
+
+article{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    gap: 40px 1px;
+    grid-auto-rows: minmax(100px, auto);
+    height: 40vh;
+    width: 100vw;
+    overflow: hidden;
+    animation: springen 0.5s infinite cubic-bezier(0.895, 0.030, 0.685, 0.220);
+}
+
+article div:nth-of-type(even){
+    margin-top: 1em;
+}
+
+@keyframes springen{
+    0% {
+        margin-top: 0em
+    }
+    50% {
+        margin-top: -0.5em
+    }
+    100% {
+        margin-top: 0em;
+    }
+
+}
+
+.man {
+    display: flex;
+    flex-direction: column;
+    width: 100px;   
+    align-items: center;
+}
+
+.popje {
     width: 100%;
-    background-repeat: no-repeat;
-    margin: auto;
+}
+
+.hoofdj {
+    width: 50%;
+    border-radius: 100px;
+    margin: auto 0;
+}
+
+.voetballer {
+    position: absolute;
+    bottom: 0vh;
+    display: flex;
+    flex-direction: column;
+    width: 100px;   
+    align-items: center;
 }
