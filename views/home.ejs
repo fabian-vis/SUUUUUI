@@ -11,9 +11,16 @@
         </article>
         <div class="billboards">
             <div class="billboard1">
-
+                <img src="/img/Feyenoord_logo.svg" alt="feyenoord logo">
+                <div>
+                    <h1>Total visitors: <%= visitors %></h1>
+                    <h1>Now Shooting: <%= randomnpc.node.owner.login %><h1/>
+                    <h1>Total Commits: <%= randomnpc.node.defaultBranchRef.target.history.totalCount %></h1>
+                </div>
+                <img src="/img/Feyenoord_logo.svg" alt="feyenoord logo">
             </div>
-            <div class="billboard2">
+            <div class="billboard2" id="mbappeboard">
+
             </div>
         </div>
         <img src="/img/doel.svg" class="doel">
@@ -21,6 +28,7 @@
         <div class="voetballer" id="jorginho">
             <img class="hoofdj" src="<%= randomnpc.node.owner.avatarUrl %> " alt="hoofden">
             <img class="popj" src="/img/poppetje.svg" alt="poppetje">
+            <p class="nummer"><%= randomnpc.node.owner.repositories.nodes.length %></p>
         </div>
         <div class="popup" id="popup">
             <div class="popupcontent">
@@ -30,7 +38,8 @@
                   </div>
                   <div class="popup-body">
                     <img src="<%= randomnpc.node.owner.avatarUrl %> " alt="hoofden">
-                    <a href="<%= randomnpc.node.url %>" target="_blank">Github repository</a></b></p>
+                    <p><%= randomnpc.node.owner.login %></p>
+                    <a href="<%= randomnpc.node.url %>" target="_blank">Check out the repository</a></b></p%>
                     <% if (randomnpc.node.shortDescriptionHTML)
                     { %>
                         <p><%= randomnpc.node.shortDescriptionHTML %></p>
@@ -38,11 +47,29 @@
                     else { %>
                         <p>Deze gebruiker heeft geen description :(</p>
                     <% } %>
+                    <p>Total Commits: <%= randomnpc.node.defaultBranchRef.target.history.totalCount %></p>
                     
                    
                   </div>
             </div>
         </div>
+        <img src="/img/cr7.gif" id="ronaldo" class="ronaldogifcss">
+        <a href="/">
+            <img src="/img/arrow.svg" class="pijl">
+        </a>
+        <form class="dropdown" name="project" method="get" action="/">
+            <p>Current subject: <%= currentProject %></p>
+            <label for="color">Select a different subject</label>
+             <select name="project">
+                <option selected disabled>Select your subject</option>
+                <option name="wafs" value="web-app-from-scratch-2122">Web apps from scratch</option>
+                <option name="css" value="css-to-the-rescue-2122">CSS to the rescue</option>
+                <option name="project1" value="project-1-2122">Project OBA</option>
+                <option name="pwa" value="progressive-web-apps-2122">Progressive web apps</option>
+                <option name="browsertech" value="browser-technologies-2122">Browser technologies</option>
+             </select>
+    <button>Doorgaan</button>
+</form>
     </section>
 </main>
 <%- include('./partials/foot') %>
