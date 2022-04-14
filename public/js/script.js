@@ -9,15 +9,16 @@ var mbappeboard = document.getElementById("mbappeboard");
 let math = Math.random() * 100;
 var ronaldo = document.getElementById("ronaldo");
 var span = document.getElementsByClassName("close")[0];
-
+var keepertje = document.getElementById("keepertje");
 
 const schiet = () => {
     jorginho.classList.add('schietcss');
     jorginhoBal.classList.add('balcss');
     popup.classList.add('popupcss');
-
+    
     setTimeout(function(){
         crowdsound.play();
+
         crowd.classList.add('snellercss');
 
         if (math < 25)
@@ -36,8 +37,10 @@ const schiet = () => {
             ronaldo.classList.add('ronaldoanimatie');
             mbappeboard.classList.add('ronaldosuicss');
         }
- 
     }, 1500)
+    setTimeout(function(){
+        keepertje.classList.add('keepertjeani');
+    }, 900)
 }
 
 

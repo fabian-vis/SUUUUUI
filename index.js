@@ -44,6 +44,19 @@ const readableProject = (project) => {
   }
   return project
 }
+let antwoordDocenten;
+var theRandomNumber = Math.floor(Math.random() * 10) + 1;
+const schiet = () => {
+ 
+            if (theRandomNumber < 5) {
+                antwoordDocenten = "https://avatars.githubusercontent.com/u/1061632?v=4"
+  
+              } else {
+                antwoordDocenten = "https://avatars.githubusercontent.com/u/1391509?v=4"
+              }
+
+}
+schiet()
 
 app.get("/", (req, res) => {
   const formProject = req.query.project
@@ -91,7 +104,8 @@ app.get("/", (req, res) => {
             visitors: data.repositoryOwner.repository.forks.edges.length,
             projects: data.repositoryOwner.repository.forks.edges,
             randomnpc: random_item(data.repositoryOwner.repository.forks.edges),
-            currentProject: readableProject(project)
+            currentProject: readableProject(project),
+            antwoordDocent: antwoordDocenten
         })
     })
 })
