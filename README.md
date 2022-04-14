@@ -2,9 +2,14 @@
 
 De opdracht was om vier dagen lang iets creatiefs te maken met de GitHub GraphQl API.
 
+### Gemaakt door
+- [Fabian Vis](https://github.com/fabian-vis)
+- [Sietse Roos](https://github.com/sietse333)
+
 ### Resultaat
 
-![Voorbeeld](public/img/voorbeeldweb.png)
+<img width="1530" alt="Schermafbeelding 2022-04-14 om 11 10 52" src="https://user-images.githubusercontent.com/70572501/163354860-b564d9cd-16e5-4f48-b844-5c479ccd30d3.png">
+
 
 ### User story
 
@@ -39,7 +44,8 @@ Vergeet niet om je eigen API key aan te vragen op github. Vervolgens moet je een
 
 ### API Documentatie
 Hier kan je alle informatie vinden over de api: [GraphQL Documentatie](https://docs.github.com/en/graphql)
-De explorer hebben we gebruikt om de query te genereren: raphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer)
+
+De explorer hebben we gebruikt om de query te genereren: [GraphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer)
 
 
 Met de volgende query halen we de gewenste data uit de API op:
