@@ -92,8 +92,6 @@ graphqlAuth(`{
 Dit project is voorzien van een MIT licence.
 
 ### Resources
-
-Do- centen en Student-Assistenten
-
-ht- https://docs.github.com/en/graphql
-Me- destudenten :)
+- Docenten en Student-Assistenten
+- https://docs.github.com/en/graphql
+- Medestudenten :)
